@@ -56,8 +56,14 @@ python -m http.server 8000
 # then open http://localhost:8000
 ```
 
-## Hosting note
+## Hosting
 
-This site is written with relative paths, so it works both as an organization site
-(`https://sacsa.github.io/`) and as a project site under another account. The
-`404.html` "Back to home" link assumes the site lives at the domain root.
+The site is served as a **project page** at
+`https://brsrikrishna.github.io/sacsa.github.io/`
+(enable via repo **Settings → Pages → Deploy from a branch → `main`**, if not already on).
+
+All pages use relative paths, so the site also works unchanged if the repo is ever
+transferred to a GitHub org named `sacsa` (where it would serve at
+`https://sacsa.github.io/`). Only three absolute references assume the current URL
+and would need updating after a transfer: the `404.html` "Back to home" link and the
+`og:url` / `og:image` tags in `index.html`.
