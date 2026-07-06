@@ -21,6 +21,14 @@ Built as a static site (plain HTML/CSS/JS, no build step) and hosted with GitHub
 
 - **Design**: mobile-first, no frameworks. Styles live in `assets/css/style.css`,
   scripts in `assets/js/main.js`. Fonts are Fraunces + Source Sans 3 from Google Fonts.
+- **Branding**: the palette is derived from the two SACSA logos supplied in the
+  content brief — the coral sunburst heart (`assets/img/sacsa-heart.png`, used in
+  the header, footer, and favicon) and the pink buffalo badge
+  (`assets/img/sacsa-badge.png`, shown on the home page). The exact tokens are
+  documented at the top of `style.css`.
+- **Board photos** live in `assets/images/board/<first-last>.jpg` (square,
+  360×360). To update one, replace the file; to add a member, add a `board-card`
+  in `board.html` with a matching image.
 - **Contact form**: posts to [FormSubmit](https://formsubmit.co) and forwards to
   `sacsa@colorado.edu`. **Important:** the first submission triggers a one-time
   activation email to that inbox — click the link in it once and the form is live.
