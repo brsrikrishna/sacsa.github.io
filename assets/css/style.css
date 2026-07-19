@@ -469,18 +469,13 @@ a:hover { color: var(--berry); }
 
 /* Quote block */
 
-/* Centered SACSA badge at the very top of the home page */
-.badge-banner {
-  padding: 1.6rem 0 0.4rem;
-  text-align: center;
-}
-
-/* multiply-blend hides the badge artwork's baked-in off-white background
+/* SACSA badge, sitting above the "Our mission" heading.
+   multiply-blend hides the badge artwork's baked-in off-white background
    against the cream section without clipping the horns */
 .mission-badge {
   display: block;
-  width: min(200px, 52vw);
-  margin-inline: auto;
+  width: min(150px, 42vw);
+  margin: 0 0 1rem;
   mix-blend-mode: multiply;
 }
 
