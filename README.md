@@ -1,4 +1,4 @@
-# SACSA — Students Against Campus Sexual Assault
+# SACSA: Students Against Campus Sexual Assault
 
 Website for SACSA, a recognized student organization at the University of Colorado Boulder.
 Built as a static site (plain HTML/CSS/JS, no build step) and hosted with GitHub Pages.
@@ -7,7 +7,7 @@ Built as a static site (plain HTML/CSS/JS, no build step) and hosted with GitHub
 
 | Page | Purpose |
 | --- | --- |
-| `index.html` | Home — mission, what we do, signature events, calls to action |
+| `index.html` | Home: mission, what we do, signature events, calls to action |
 | `about.html` | Our story, what to expect, values |
 | `board.html` | Board officer bios |
 | `events.html` | Take Back the Night, Stop the Spike, craft nights, tabling |
@@ -22,7 +22,7 @@ Built as a static site (plain HTML/CSS/JS, no build step) and hosted with GitHub
 - **Design**: mobile-first, no frameworks. Styles live in `assets/css/style.css`,
   scripts in `assets/js/main.js`. Fonts are Fraunces + Source Sans 3 from Google Fonts.
 - **Branding**: the palette is derived from the two SACSA logos supplied in the
-  content brief — the coral sunburst heart (`assets/img/sacsa-heart.png`, used in
+  content brief: the coral sunburst heart (`assets/img/sacsa-heart.png`, used in
   the header, footer, and favicon) and the pink buffalo badge
   (`assets/img/sacsa-badge.png`, shown on the home page). The exact tokens are
   documented at the top of `style.css`.
@@ -31,7 +31,7 @@ Built as a static site (plain HTML/CSS/JS, no build step) and hosted with GitHub
   in `board.html` with a matching image.
 - **Contact form**: posts to [FormSubmit](https://formsubmit.co) and forwards to
   `sacsa@colorado.edu`. **Important:** the first submission triggers a one-time
-  activation email to that inbox — click the link in it once and the form is live.
+  activation email to that inbox; click the link in it once and the form is live.
 - **Newsletter / interest form buttons** link to the club's Google Forms.
   ⚠️ **Action needed:** the interest form currently requires a Google sign-in
   (anyone not logged in hits a Google login wall). In the form's settings, turn
@@ -39,7 +39,7 @@ Built as a static site (plain HTML/CSS/JS, no build step) and hosted with GitHub
   "Collect email addresses" away from *Verified*) so anyone can open it. The
   newsletter form is already public.
 - **Quick Exit**: every page has a fixed "Quick Exit" button (and double-press of
-  `Esc`) that immediately replaces the page with a neutral Google search — a common
+  `Esc`) that immediately replaces the page with a neutral Google search, a common
   safety feature on survivor-support sites.
 - **Photos** live in `assets/images/<event>/`, each as a full-size (`*-NN.jpg`,
   max 1600 px) and a thumbnail (`*-NN-thumb.jpg`, max 640 px) version, converted
@@ -47,7 +47,7 @@ Built as a static site (plain HTML/CSS/JS, no build step) and hosted with GitHub
 
 ## Editing
 
-Everything is plain HTML — edit the page you want and commit. Common tasks:
+Everything is plain HTML; edit the page you want and commit. Common tasks:
 
 - **Update board members**: edit the `board-card` blocks in `board.html`.
 - **Add gallery photos**: resize to ≤1600 px (plus a ≤640 px thumb), drop them in

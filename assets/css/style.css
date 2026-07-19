@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SACSA — Students Against Campus Sexual Assault (CU Boulder)
+   SACSA: Students Against Campus Sexual Assault (CU Boulder)
    Mobile-first stylesheet
    ========================================================================== */
 
@@ -469,20 +469,17 @@ a:hover { color: var(--berry); }
 
 /* Quote block */
 
-.mission-grid {
-  display: grid;
-  gap: 2rem;
-  align-items: center;
-}
-
-@media (min-width: 56em) {
-  .mission-grid { grid-template-columns: 1fr 240px; gap: 3rem; }
+/* Centered SACSA badge at the very top of the home page */
+.badge-banner {
+  padding: 1.6rem 0 0.4rem;
+  text-align: center;
 }
 
 /* multiply-blend hides the badge artwork's baked-in off-white background
    against the cream section without clipping the horns */
 .mission-badge {
-  width: min(240px, 62vw);
+  display: block;
+  width: min(200px, 52vw);
   margin-inline: auto;
   mix-blend-mode: multiply;
 }

@@ -1,4 +1,4 @@
-/* SACSA site scripts — no dependencies */
+/* SACSA site scripts (no dependencies) */
 (function () {
   "use strict";
 
