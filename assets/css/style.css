@@ -22,7 +22,7 @@
   --gold-tint: #fbeed3;
   --exit: #3f4650;
 
-  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-display: "Lora", Georgia, "Times New Roman", serif;
   --font-body: "Source Sans 3", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
   --radius: 16px;
@@ -619,6 +619,27 @@ a:hover { color: var(--berry); }
   margin-bottom: 0.5rem;
 }
 
+/* Founders */
+
+.founder-list {
+  list-style: none;
+  margin: 1.4rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.founder-list li {
+  background: var(--white);
+  border: 1.5px solid var(--pink);
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  padding: 0.5rem 1.25rem;
+  font-weight: 700;
+  color: var(--berry);
+}
+
 /* --------------------------------------------------------------------------
    Events
    -------------------------------------------------------------------------- */
@@ -676,6 +697,202 @@ a:hover { color: var(--berry); }
   font-size: 2rem;
   font-weight: 700;
   display: block;
+}
+
+/* Events calendar */
+
+.calendar-layout {
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (min-width: 56em) {
+  .calendar-layout { grid-template-columns: 7fr 5fr; gap: 2.5rem; }
+}
+
+.calendar-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.3rem 1.4rem 1.5rem;
+}
+
+.calendar-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.9rem;
+}
+
+.calendar-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--berry);
+  margin: 0;
+}
+
+.calendar-nav-btn {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  background: var(--rose-tint);
+  border: none;
+  border-radius: 50%;
+  color: var(--berry);
+  font-size: 1.3rem;
+  line-height: 1;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.calendar-nav-btn:hover,
+.calendar-nav-btn:focus-visible { background: var(--rose); color: #fff; }
+
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.calendar-table th {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  padding: 0.4rem 0;
+}
+
+.calendar-table th abbr { text-decoration: none; }
+
+.calendar-table td {
+  border: 1px solid rgba(168, 69, 96, 0.12);
+  vertical-align: top;
+  height: 3.2rem;
+  padding: 0.25rem 0.3rem;
+  font-size: 0.9rem;
+}
+
+/* border: 0 (not transparent color) so collapsed-border resolution
+   doesn't erase the grid lines of adjacent day cells */
+.calendar-table td.cal-empty { border: 0; }
+
+.cal-daynum {
+  display: inline-grid;
+  place-items: center;
+  min-width: 1.7rem;
+  height: 1.7rem;
+  font-weight: 600;
+  border-radius: 999px;
+}
+
+.cal-today .cal-daynum {
+  background: var(--rose);
+  color: #fff;
+}
+
+.cal-has-event { background: var(--gold-tint); }
+
+.cal-dot {
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--rose);
+  margin: 0.3rem 0 0 0.55rem;
+}
+
+/* On narrow screens event names collapse to a dot but stay readable to screen readers */
+.cal-event-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (min-width: 44em) {
+  .calendar-table td { height: 4.4rem; }
+
+  .cal-dot { display: none; }
+
+  .cal-event-label {
+    position: static;
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0.2rem 0 0;
+    clip: auto;
+    white-space: normal;
+    font-size: 0.68rem;
+    line-height: 1.25;
+    font-weight: 700;
+    color: var(--berry);
+  }
+}
+
+.upcoming-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.upcoming-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  padding: 0.9rem 1.1rem;
+}
+
+.upcoming-date {
+  flex: none;
+  width: 3.5rem;
+  text-align: center;
+  background: var(--rose-tint);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.2rem;
+  color: var(--berry);
+}
+
+.upcoming-date .month {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--rose);
+}
+
+.upcoming-date .day {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  line-height: 1.15;
+}
+
+.upcoming-item h3 { font-size: 1.05rem; margin-bottom: 0.15em; }
+
+.upcoming-item p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+.calendar-note {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin-top: 1rem;
 }
 
 /* --------------------------------------------------------------------------
@@ -927,6 +1144,18 @@ a:hover { color: var(--berry); }
 
 .site-footer li { margin-bottom: 0.45rem; }
 
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.social-link svg {
+  width: 1.1em;
+  height: 1.1em;
+  fill: currentColor;
+}
+
 .footer-brand {
   display: flex;
   align-items: center;
@@ -994,6 +1223,16 @@ a:hover { color: var(--berry); }
   }
 
   .hero::after { display: none; }
+
+  /* Calendar: backgrounds are stripped in print, so today's white-on-rose
+     day number needs dark text, with a border to keep "today" visible */
+  .cal-today .cal-daynum,
+  .cal-has-event {
+    background: none !important;
+    color: #000 !important;
+  }
+
+  .cal-today .cal-daynum { border: 2px solid #000; }
 
   .hero h1,
   .hero p,

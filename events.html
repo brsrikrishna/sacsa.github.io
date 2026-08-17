@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" href="assets/img/sacsa-heart.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -48,6 +48,45 @@
         <span class="eyebrow">Events</span>
         <h1>Loud marches, quiet crafts</h1>
         <p>Some events raise our voices. Others give us space to breathe. Every one of them builds the community that makes change possible.</p>
+      </div>
+    </section>
+
+    <section class="section section-tint" aria-labelledby="calendar-heading">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Mark your calendar</span>
+          <h2 id="calendar-heading">Upcoming events</h2>
+          <p class="lede">Here's what's on the horizon. Dates marked TBA are tentative, so keep an eye on our newsletter and Instagram for confirmations.</p>
+        </div>
+        <div class="calendar-layout">
+          <div class="calendar-card">
+            <div class="calendar-head">
+              <button class="calendar-nav-btn" type="button" id="cal-prev" aria-label="Previous month">‹</button>
+              <p class="calendar-title" id="cal-title" aria-live="polite"></p>
+              <button class="calendar-nav-btn" type="button" id="cal-next" aria-label="Next month">›</button>
+            </div>
+            <table class="calendar-table" aria-labelledby="cal-title">
+              <thead>
+                <tr>
+                  <th scope="col"><abbr title="Sunday">Sun</abbr></th>
+                  <th scope="col"><abbr title="Monday">Mon</abbr></th>
+                  <th scope="col"><abbr title="Tuesday">Tue</abbr></th>
+                  <th scope="col"><abbr title="Wednesday">Wed</abbr></th>
+                  <th scope="col"><abbr title="Thursday">Thu</abbr></th>
+                  <th scope="col"><abbr title="Friday">Fri</abbr></th>
+                  <th scope="col"><abbr title="Saturday">Sat</abbr></th>
+                </tr>
+              </thead>
+              <tbody id="cal-body"></tbody>
+            </table>
+          </div>
+          <div>
+            <h3 class="visually-hidden">Next up</h3>
+            <ol class="upcoming-list" id="upcoming-list"></ol>
+            <p class="calendar-note">Want a reminder before each event? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkVsMdj7MnFy4facTIuq62C4f8fyUFB1p0TTD66it3BiXyvw/viewform?usp=publish-editor" target="_blank" rel="noopener">Sign up for the newsletter</a> or follow us on <a href="https://www.instagram.com/sacsacu/" target="_blank" rel="noopener">Instagram</a>.</p>
+          </div>
+        </div>
+        <noscript><p>The interactive calendar needs JavaScript. Everything we run is described in the event list below.</p></noscript>
       </div>
     </section>
 
@@ -152,6 +191,12 @@
         <ul>
           <li><a href="get-involved.html">Get involved</a></li>
           <li><a href="mailto:sacsa@colorado.edu">sacsa@colorado.edu</a></li>
+          <li>
+            <a class="social-link" href="https://www.instagram.com/sacsacu/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.2c3.19 0 3.57.01 4.83.07 1.17.05 1.8.25 2.22.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.05.41 2.22.06 1.26.07 1.64.07 4.83s-.01 3.57-.07 4.83c-.05 1.17-.25 1.8-.41 2.22-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.05.36-2.22.41-1.26.06-1.64.07-4.83.07s-3.57-.01-4.83-.07c-1.17-.05-1.8-.25-2.22-.41a3.72 3.72 0 0 1-1.38-.9c-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.05-.41-2.22C2.21 15.57 2.2 15.19 2.2 12s.01-3.57.07-4.83c.05-1.17.25-1.8.41-2.22.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.05-.36 2.22-.41C8.43 2.21 8.81 2.2 12 2.2M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.92 5.92 0 0 0-2.13 1.38A5.92 5.92 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.13a5.92 5.92 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.92 5.92 0 0 0 2.13-1.38 5.92 5.92 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.92 5.92 0 0 0-1.38-2.13A5.92 5.92 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84Zm0 10.15A4 4 0 1 1 16 12a4 4 0 0 1-4 4Zm7.85-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44Z"/></svg>
+              Instagram
+            </a>
+          </li>
         </ul>
       </div>
     </div>
