@@ -4,3 +4,6 @@ Website Template/
 # OS cruft
 Thumbs.db
 .DS_Store
+
+# Officer bios/photos source PDF (not published)
+Officer Pictures & Bios*.pdf

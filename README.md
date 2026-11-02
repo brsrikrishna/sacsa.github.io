@@ -27,8 +27,10 @@ Built as a static site (plain HTML/CSS/JS, no build step) and hosted with GitHub
   (`assets/img/sacsa-badge.png`, shown on the home page). The exact tokens are
   documented at the top of `style.css`.
 - **Board photos** live in `assets/images/board/<first-last>.jpg` (square,
-  360×360). To update one, replace the file; to add a member, add a `board-card`
-  in `board.html` with a matching image.
+  360×360, head-and-shoulders crops). To update one, replace the file; to add a
+  member, add a `board-card` in `board.html` with a matching image. The current
+  photos and bios come from the officers' "Officer Pictures & Bios" PDF, which is
+  kept out of the repo via `.gitignore`.
 - **Contact form**: posts to [FormSubmit](https://formsubmit.co) and forwards to
   `sacsa@colorado.edu`. **Important:** the first submission triggers a one-time
   activation email to that inbox; click the link in it once and the form is live.
